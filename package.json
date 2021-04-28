@@ -1,0 +1,32 @@
+{
+  "name": "haiku-bot-final",
+  "version": "1.0.0",
+  "description": "Haiku writing Twitter bot for Adv CC Final Project",
+  "main": "ku_bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mj2360/haiku-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "twit",
+    "haiku",
+    "poetry",
+    "rita"
+  ],
+  "author": "Morgan J.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mj2360/haiku-bot/issues"
+  },
+  "homepage": "https://github.com/mj2360/haiku-bot#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "request": "^2.88.2",
+    "rita": "^2.4.86",
+    "twit": "^2.2.11"
+  }
+}
