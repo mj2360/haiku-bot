@@ -1,6 +1,11 @@
 {
-        "start" : "$subject $verb $object.",
-        "subject" : "I | You | They",
-        "object" :  "coffee | bread | milk",
-        "verb" : "want | hate | like | love"
+        "start" : "$line1 $line2 $line3.",
+        "line1" : "$prep $season",
+        "line2" : "$verb all the $nnn", 
+        "line3" : "I long for $season.nr()", 
+        "prep" : "But | By | In | From | On",
+        "season" :"spring | fall | summer | winter",
+        "verb" : "hearing | sucking | keeping | touching | sensing",
+        "nnn" : "memories | peonies | energy | pollution | beauty | mysteries"
+
 }
