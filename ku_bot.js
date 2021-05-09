@@ -1,5 +1,3 @@
-console.log('Testing Node Code!!')
-
 const Rita = require('rita'); 
 const wordData = require('./words.json');
 const request = require('request'); 
@@ -64,7 +62,7 @@ function tweetBot(err, data, rspns){
     lines[2][2] = Rita.conjugate(capitalize(randVerb2), opts2) + " " + randNoun1;
 
 
-    T.post('statuses/update', {status: lines[i][0] + " / " + lines[i][1] + " / " + lines[i][2] +  Math.floor(Math.random()*100)}, tweeted);
+    T.post('statuses/update', {status: lines[i][0] + " / " + lines[i][1] + " / " + lines[i][2]}, tweeted);
    
     if(i == 2){
         i = 0; 
