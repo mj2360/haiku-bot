@@ -27,9 +27,12 @@ function setup(){
 
 function draw(){
     background(220); 
-    text(lines[randLine][0], width / 2, 75);
-    text(lines[randLine][1], width / 2, 110);
-    text(lines[randLine][2], width / 2, 145);
+    
+    for(i=0; i<lines.length; i++){
+        text(lines[i][0], width / 2, 75);
+        text(lines[i][1], width / 2, 110);
+        text(lines[i][2], width / 2, 145);
+    }
 }
 
 
