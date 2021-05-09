@@ -31,7 +31,7 @@ function writeData(){
 
 //searching for words in API that match POS parameter
 //returns all the verbs
-for (page = 1; page<114; page++){
+for (page = 1; page<9; page++){
     const options = {
         method: 'GET',
         url: 'https://wordsapiv1.p.rapidapi.com/words/?partOfSpeech=verb&page='+ page,
@@ -78,12 +78,11 @@ for (page = 1; page<114; page++){
         } 
         // console.log(verbs)
         // console.log(wordObj);
-        // let wordData = JSON.stringify(wordObj, null, 2);
-        // fs.writeFileSync('words.json', wordData);
+        let wordData = JSON.stringify(wordObj, null, 2);
+        fs.writeFileSync('words.json', wordData);
     }); 
 }
 
-console.log(verbs); 
 
 
 
