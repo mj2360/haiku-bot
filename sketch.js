@@ -64,6 +64,18 @@ function mouseReleased() {
     lines[2][1] = randNoun4 + " is also ";
     lines[2][2] =  randVerb2 + "ing"  + " " + randNoun1;
 
+    //add infinitive to 0 and 2 verbs
+    lines[3][0] = randVerb4; 
+    lines[3][1] = "And " + randVerb1 + " adds " + randNoun3;
+    lines[3][2] =  "So " + wordData.verb_syll[4][int(random(0,wordData.verb_syll[4].length -1))];
+
+    //add gerund to randVerb2
+    lines[4][0] = "Although " + randNoun1 + randVerb2; 
+    lines[4][1] = randNoun1 " also " + randVerb4;
+    lines[4][2] =  "As to " + randNoun3;
+
+    
+
     //maybe do two more haiku variations 
   }
 

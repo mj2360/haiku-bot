@@ -20,6 +20,11 @@ opts2 = {
 
 };
 
+opts3 = {
+    form: Rita.INFINITIVE
+  
+  };
+
 
 //word variables 
 var randNoun1 = wordData.noun_syll[1][Math.floor(Math.random() * wordData.noun_syll[1].length)];
@@ -32,7 +37,7 @@ var randVerb2 = wordData.verb_syll[2][Math.floor(Math.random() * wordData.verb_s
 var randVerb3 = wordData.verb_syll[3][Math.floor(Math.random() * wordData.verb_syll[3].length)]; 
 var randVerb4 = wordData.verb_syll[4][Math.floor(Math.random() * wordData.verb_syll[4].length)]; 
 
-var lines = [["", "", ""], ["", "", ""], ["", "", ""]];
+var lines = [["", "", ""], ["", "", ""], ["", "", ""], ["", "", ""], ["","",""]];
 var i = 0; 
 
 //used in T.post to capitalize nouns and verbs
@@ -61,10 +66,19 @@ function tweetBot(err, data, rspns){
     lines[2][1] = capitalize(randNoun4) + " is also ";
     lines[2][2] = Rita.conjugate(capitalize(randVerb2), opts2) + " " + randNoun1;
 
+    lines[3][0] = Rita.conjugate(capitalize(randVerb4), opts3); 
+    lines[3][1] = "And " + randVerb1 + " adds " + randNoun3;
+    lines[3][2] =  "So " + Rita.conjugate(capitalize(wordData.verb_syll[4][Math.floor(Math.random() * wordData.verb_syll[4].length)]), opts3);
+
+    
+    lines[4][0] = "Although " + randNoun1 + Rita.conjugate(capitalize(randVerb2), opts2); 
+    lines[4][1] = randNoun1 + " also " + randVerb4;
+    lines[4][2] =  "As to " + randNoun3;
+
 
     T.post('statuses/update', {status: lines[i][0] + " / " + lines[i][1] + " / " + lines[i][2]}, tweeted);
    
-    if(i == 2){
+    if(i == 4){
         i = 0; 
     } else{
         i++; 
